@@ -181,6 +181,9 @@ class YuwengRepository @Inject constructor(
     suspend fun getForgottenCount(): Int =
         forgettingLogDao.getForgottenCount(USER_ID)
 
+    suspend fun getForgottenLog(): List<ForgettingLogEntity> =
+        forgettingLogDao.getAll(USER_ID)
+
     // ========== LLM ==========
 
     suspend fun isLlmConfigured(): Boolean = llmConfigStore.getConfig().isConfigured
