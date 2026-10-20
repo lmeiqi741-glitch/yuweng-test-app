@@ -64,7 +64,7 @@ fun ForgettingCurveScreen(
 
         Text(
             text = "屿翁的遗忘曲线",
-            style = XinyuFontSize.h1,
+            fontSize = XinyuFontSize.h1,
             color = InkColor
         )
 
@@ -72,7 +72,7 @@ fun ForgettingCurveScreen(
 
         Text(
             text = "大多数记忆会慢慢淡下去。被反复想起的，会留下来。",
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = FogGray,
             fontStyle = FontStyle.Italic
         )
@@ -107,18 +107,18 @@ fun ForgettingCurveScreen(
         ) {
             Text(
                 text = "第 30 天，我决定要不要继续记得",
-                style = XinyuFontSize.caption,
+                fontSize = XinyuFontSize.caption,
                 color = WarmGold
             )
             Spacer(modifier = Modifier.height(XinyuSpacing.sm))
             Text(
                 text = "被想起 ≥3 次 → 留下来",
-                style = XinyuFontSize.micro,
+                fontSize = XinyuFontSize.micro,
                 color = MistBlue
             )
             Text(
                 text = "忘了的不是不重要，是没一直留在脑子里。",
-                style = XinyuFontSize.micro,
+                fontSize = XinyuFontSize.micro,
                 color = FogGray,
                 fontStyle = FontStyle.Italic
             )
