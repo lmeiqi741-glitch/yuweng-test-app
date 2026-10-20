@@ -67,7 +67,7 @@ fun StatusScreenContent(
             .verticalScroll(scrollState)
             .padding(horizontal = XinyuSpacing.xl)
     ) {
-        Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
 
         Text(
             text = "屿翁的状态",
@@ -75,7 +75,7 @@ fun StatusScreenContent(
             color = InkColor
         )
 
-        Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
 
         // 沉默状态卡（沉默时显示）
         if (isSilent && silenceState != null) {
@@ -84,7 +84,7 @@ fun StatusScreenContent(
                 pendingCount = pendingCount,
                 onNavigateToChat = onNavigateToChat
             )
-            Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+            Spacer(modifier = Modifier.height(XinyuSpacing.xl))
         }
 
         // 心情
@@ -94,17 +94,17 @@ fun StatusScreenContent(
             modifier = Modifier.fillMaxWidth()
         )
 
-        Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
 
         // 能量
         EnergySection(energy = state.energy)
 
-        Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
 
         // 偏好（行为隐喻，values 隐藏）
         PreferenceSection(preference = state.preference)
 
-        Spacer(modifier = Modifier.height = XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
 
         // 入口
         EntrySection(
@@ -112,7 +112,7 @@ fun StatusScreenContent(
             onNavigateToForgottenLog = onNavigateToForgottenLog
         )
 
-        Spacer(modifier = Modifier.height = XinyuSpacing.xxl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xxl))
     }
 }
 
@@ -149,7 +149,7 @@ fun MoodSection(
                 }
             )
             if (expanded) {
-                Spacer(modifier = Modifier.width(XinyuSpacing.sm))
+                Spacer(modifier = Modifier.width(XinyuSpacing.sm)
                 Text(
                     text = "${"%.1f".format(mood)}/10",
                     style = XinyuFontSize.caption,
@@ -158,7 +158,7 @@ fun MoodSection(
             }
         }
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.md))
+        Spacer(modifier = Modifier.height(XinyuSpacing.md)
 
         // 心情条形
         Box(
@@ -185,7 +185,7 @@ fun MoodSection(
 
         // 最近7天迷你曲线
         if (moodHistory.isNotEmpty()) {
-            Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+            Spacer(modifier = Modifier.height(XinyuSpacing.lg)
             MiniMoodCurve(moodHistory)
         }
     }
@@ -243,7 +243,7 @@ fun EnergySection(energy: Int) {
                     else -> FogGray
                 }
             )
-            Spacer(modifier = Modifier.width(XinyuSpacing.sm))
+            Spacer(modifier = Modifier.width(XinyuSpacing.sm)
             Text(
                 text = "/100 ($energyText)",
                 style = XinyuFontSize.caption,
@@ -251,7 +251,7 @@ fun EnergySection(energy: Int) {
             )
         }
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.md))
+        Spacer(modifier = Modifier.height(XinyuSpacing.md)
 
         Box(
             modifier = Modifier
@@ -275,7 +275,7 @@ fun EnergySection(energy: Int) {
             )
         }
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+        Spacer(modifier = Modifier.height(XinyuSpacing.sm)
 
         Text(
             text = "你无法给屿翁充电。他只是有时候精神好，有时候不好。",
@@ -307,7 +307,7 @@ fun PreferenceSection(preference: PreferenceVector?) {
                     style = XinyuFontSize.caption,
                     color = FogGray
                 )
-                Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+                Spacer(modifier = Modifier.height(XinyuSpacing.sm)
                 topTopics.forEach { (topic, value) ->
                     val preference = if (value > 0) "喜欢" else "不太喜欢"
                     Text(
@@ -330,7 +330,7 @@ fun PreferenceSection(preference: PreferenceVector?) {
                 )
             }
 
-            Spacer(modifier = Modifier.height(XinyuSpacing.md))
+            Spacer(modifier = Modifier.height(XinyuSpacing.md)
 
             Text(
                 text = "这是屿翁的内核，他不展示。",
@@ -353,7 +353,7 @@ fun EntrySection(
             style = XinyuFontSize.h3,
             color = InkColor
         )
-        Spacer(modifier = Modifier.height(XinyuSpacing.md))
+        Spacer(modifier = Modifier.height(XinyuSpacing.md)
 
         // 屿翁记得
         Row(
@@ -366,13 +366,13 @@ fun EntrySection(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text("📝", fontSize = 20.sp)
-            Spacer(modifier = Modifier.width(XinyuSpacing.md))
+            Spacer(modifier = Modifier.width(XinyuSpacing.md)
             Text("屿翁记得", style = XinyuFontSize.body, color = InkColor)
             Spacer(modifier = Modifier.weight(1f))
             Text("→", color = FogGray)
         }
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+        Spacer(modifier = Modifier.height(XinyuSpacing.sm)
 
         // 遗忘日志
         Row(
@@ -385,7 +385,7 @@ fun EntrySection(
             verticalAlignment = Alignment.CenterVertically
         ) {
             Text("🍃", fontSize = 20.sp)
-            Spacer(modifier = Modifier.width(XinyuSpacing.md))
+            Spacer(modifier = Modifier.width(XinyuSpacing.md)
             Text("遗忘日志", style = XinyuFontSize.body, color = InkColor)
             Spacer(modifier = Modifier.weight(1f))
             Text("→", color = FogGray)
@@ -417,7 +417,7 @@ fun SilenceStatusCard(
                 ) {
                     Text("屿", fontSize = 18.sp, color = FogGray)
                 }
-                Spacer(modifier = Modifier.width(XinyuSpacing.md))
+                Spacer(modifier = Modifier.width(XinyuSpacing.md)
                 Column {
                     Text(
                         text = silenceState.uiText,
@@ -433,7 +433,7 @@ fun SilenceStatusCard(
             }
 
             if (pendingCount > 0) {
-                Spacer(modifier = Modifier.height(XinyuSpacing.md))
+                Spacer(modifier = Modifier.height(XinyuSpacing.md)
                 Row(
                     modifier = Modifier
                         .clip(RoundedCornerShape(XinyuRadius.sm))
@@ -473,7 +473,7 @@ fun XinyuCardWithTitle(
             style = XinyuFontSize.h3,
             color = DaiGray
         )
-        Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+        Spacer(modifier = Modifier.height(XinyuSpacing.lg)
         content()
     }
 }
