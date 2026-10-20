@@ -350,7 +350,6 @@ fun ChatInputArea(
                 unfocusedContainerColor = MoonWhite,
                 disabledContainerColor = MoonWhite.copy(alpha = 0.7f)
             ),
-            textStyle = XinyuFontSize.body
         )
 
         Spacer(modifier = Modifier.width(XinyuSpacing.sm))
