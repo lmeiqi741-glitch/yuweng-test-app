@@ -283,7 +283,7 @@ private fun ForgottenLogEntry(
         color = DuskPurple.copy(alpha = 0.08f)
     ) {
         Column(
-            modifier = Modifier.padding(XinyuSpacing.lg))
+            modifier = Modifier.padding(XinyuSpacing.lg)
         ) {
             Text(
                 text = dateFormat.format(Date(entry.forgottenAt)),
@@ -395,7 +395,7 @@ private fun MemoryCardItem(
         shadowElevation = 2.dp
     ) {
         Column(
-            modifier = Modifier.padding(XinyuSpacing.lg))
+            modifier = Modifier.padding(XinyuSpacing.lg)
         ) {
             // ── 顶部：类型徽章 + 状态徽章 ──
             Row(
@@ -514,13 +514,13 @@ private fun MemoryCardItem(
                     Surface(
                         shape = RoundedCornerShape(XinyuRadius.sm),
                         color = SecondaryBg.copy(alpha = 0.7f),
-                        modifier = Modifier.padding(top = XinyuSpacing.xs))
+                        modifier = Modifier.padding(top = XinyuSpacing.xs)
                     ) {
                         Text(
                             text = note,
                             color = DaiGray,
                             fontSize = 13.sp,
-                            modifier = Modifier.padding(XinyuSpacing.sm))
+                            modifier = Modifier.padding(XinyuSpacing.sm)
                         )
                     }
                 }
