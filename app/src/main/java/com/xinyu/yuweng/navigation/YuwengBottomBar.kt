@@ -34,7 +34,7 @@ data class NavTab(
     val route: String,
     val labelRes: Int,
     val selectedIcon: ImageVector,
-    unselectedIcon: ImageVector
+    val unselectedIcon: ImageVector
 )
 
 val navTabs = listOf(
