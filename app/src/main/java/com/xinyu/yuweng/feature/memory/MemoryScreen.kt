@@ -113,7 +113,7 @@ fun MemoryScreenContent(
             .background(MoonWhite)
             .padding(horizontal = XinyuSpacing.xl)
     ) {
-        Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+        Spacer(modifier = Modifier.height(XinyuSpacing.lg)
 
         // ── 分段切换 ──
         SegmentedToggle(
@@ -122,7 +122,7 @@ fun MemoryScreenContent(
             onSelect = { idx -> onViewSelected(if (idx == 1) "tree" else "card") }
         )
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.xl))
+        Spacer(modifier = Modifier.height(XinyuSpacing.xl)
 
         if (selectedView == "tree") {
             TreeViewContent(activeCards = activeCards)
@@ -203,7 +203,7 @@ private fun CardViewContent(
         // ── 摘要栏 ──
         item {
             SummaryBar(activeCount = activeCount, forgottenCount = forgottenCount)
-            Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+            Spacer(modifier = Modifier.height(XinyuSpacing.lg)
         }
 
         // ── 遗忘日志条目（最近一条，如有未赎回的） ──
@@ -213,7 +213,7 @@ private fun CardViewContent(
                     entry = entry,
                     onRedeem = { onRedeem(entry.id) }
                 )
-                Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+                Spacer(modifier = Modifier.height(XinyuSpacing.lg)
             }
         }
 
@@ -237,7 +237,7 @@ private fun CardViewContent(
 
         // 底部留白
         item {
-            Spacer(modifier = Modifier.height(XinyuSpacing.huge))
+            Spacer(modifier = Modifier.height(XinyuSpacing.huge)
         }
     }
 }
@@ -290,7 +290,7 @@ private fun ForgottenLogEntry(
                 color = FogGray,
                 fontSize = 12.sp
             )
-            Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+            Spacer(modifier = Modifier.height(XinyuSpacing.sm)
             Text(
                 text = entry.contentSnapshot,
                 color = InkColor,
@@ -298,13 +298,13 @@ private fun ForgottenLogEntry(
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
             )
-            Spacer(modifier = Modifier.height(XinyuSpacing.xs))
+            Spacer(modifier = Modifier.height(XinyuSpacing.xs)
             Text(
                 text = entry.whyForgotten,
                 color = FogGray,
                 fontSize = 12.sp
             )
-            Spacer(modifier = Modifier.height(XinyuSpacing.md))
+            Spacer(modifier = Modifier.height(XinyuSpacing.md)
             Surface(
                 shape = RoundedCornerShape(XinyuRadius.pill),
                 color = MistBlue.copy(alpha = 0.3f),
@@ -338,7 +338,7 @@ private fun EmptyState() {
             text = "🌱",
             fontSize = 48.sp
         )
-        Spacer(modifier = Modifier.height(XinyuSpacing.lg))
+        Spacer(modifier = Modifier.height(XinyuSpacing.lg)
         Text(
             text = "这棵树还没长叶子。屿翁还在观察。",
             color = FogGray,
@@ -419,7 +419,7 @@ private fun MemoryCardItem(
                             fontSize = 16.sp
                         )
                     }
-                    Spacer(modifier = Modifier.width(XinyuSpacing.sm))
+                    Spacer(modifier = Modifier.width(XinyuSpacing.sm)
                     Text(
                         text = typeInfo.label,
                         color = typeInfo.color,
@@ -442,7 +442,7 @@ private fun MemoryCardItem(
                 }
             }
 
-            Spacer(modifier = Modifier.height(XinyuSpacing.md))
+            Spacer(modifier = Modifier.height(XinyuSpacing.md)
 
             // ── 卡片内容 ──
             Text(
@@ -454,7 +454,7 @@ private fun MemoryCardItem(
                 overflow = TextOverflow.Ellipsis
             )
 
-            Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+            Spacer(modifier = Modifier.height(XinyuSpacing.sm)
 
             // ── 情感权重条 ──
             AnimatedProgressBar(
@@ -463,7 +463,7 @@ private fun MemoryCardItem(
                 label = "情感强度"
             )
 
-            Spacer(modifier = Modifier.height(XinyuSpacing.xs))
+            Spacer(modifier = Modifier.height(XinyuSpacing.xs)
 
             // ── 遗忘率条 ──
             AnimatedProgressBar(
@@ -473,7 +473,7 @@ private fun MemoryCardItem(
                 showLabel = true
             )
 
-            Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+            Spacer(modifier = Modifier.height(XinyuSpacing.sm)
 
             // ── 底部信息 ──
             Row(
@@ -495,7 +495,7 @@ private fun MemoryCardItem(
             }
 
             // ── 可展开的屿翁口吻注解 ──
-            Spacer(modifier = Modifier.height(XinyuSpacing.sm))
+            Spacer(modifier = Modifier.height(XinyuSpacing.sm)
             Text(
                 text = if (expandedNote) "收起 ▲" else "屿翁的话 ▼",
                 color = FogGray,
@@ -761,7 +761,7 @@ fun MemoryScreenPreview() {
             id = 3L,
             userId = 1L,
             cardType = "quote",
-            content = "你引用了史铁生："人的故乡，并不止于一块特定的土地，而是一种辽阔无比的心情。"",
+            content = "你引用了史铁生：\"人的故乡，并不止于一块特定的土地，而是一种辽阔无比的心情。\"",
             context = "用户分享了文学引用",
             emotionalWeight = 0.6f,
             status = "fading",
