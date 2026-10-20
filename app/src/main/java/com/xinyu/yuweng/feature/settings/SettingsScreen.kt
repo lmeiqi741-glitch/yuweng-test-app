@@ -84,7 +84,7 @@ fun SettingsScreenContent(
 
         Text(
             text = "设置",
-            style = XinyuFontSize.h1,
+            fontSize = XinyuFontSize.h1,
             color = InkColor
         )
 
@@ -93,14 +93,14 @@ fun SettingsScreenContent(
         // 模型 API 配置
         Text(
             text = "模型 API 配置",
-            style = XinyuFontSize.h3,
+            fontSize = XinyuFontSize.h3,
             color = DaiGray
         )
         Spacer(modifier = Modifier.height(XinyuSpacing.md))
 
         Text(
             text = "屿翁通过你配置的 API 说话。所有配置仅存本机。",
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = FogGray
         )
 
@@ -109,7 +109,7 @@ fun SettingsScreenContent(
         // 预设快填
         Text(
             text = "预设",
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = FogGray
         )
         Spacer(modifier = Modifier.height(XinyuSpacing.sm))
@@ -133,7 +133,7 @@ fun SettingsScreenContent(
                             baseUrl = preset.baseUrl
                             modelName = preset.recommendedModel
                         },
-                        label = { Text(preset.name, style = XinyuFontSize.caption) },
+                        label = { Text(preset.name, fontSize = XinyuFontSize.caption) },
                         modifier = Modifier.weight(1f),
                         colors = FilterChipDefaults.filterChipColors(
                             selectedContainerColor = WarmGold.copy(alpha = 0.3f),
@@ -231,7 +231,7 @@ fun SettingsScreenContent(
             Spacer(modifier = Modifier.height(XinyuSpacing.sm))
             Text(
                 text = testResult ?: "",
-                style = XinyuFontSize.caption,
+                fontSize = XinyuFontSize.caption,
                 color = if (testResult == "OK" || testResult?.contains("success") == true) MossGreen else FogGray
             )
         }
@@ -274,7 +274,7 @@ fun SettingsScreenContent(
         ) {
             Text(
                 text = "高级选项",
-                style = XinyuFontSize.caption,
+                fontSize = XinyuFontSize.caption,
                 color = FogGray
             )
             Spacer(modifier = Modifier.weight(1f))
@@ -341,10 +341,10 @@ fun SettingsScreenContent(
             Text("📊", fontSize = 20.sp)
             Spacer(modifier = Modifier.width(XinyuSpacing.md))
             Column {
-                Text("屿翁的遗忘曲线", style = XinyuFontSize.body, color = InkColor)
+                Text("屿翁的遗忘曲线", fontSize = XinyuFontSize.body, color = InkColor)
                 Text(
                     "纯展示 · 遗忘不可控",
-                    style = XinyuFontSize.micro,
+                    fontSize = XinyuFontSize.micro,
                     color = FogGray
                 )
             }
