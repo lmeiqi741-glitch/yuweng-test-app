@@ -154,7 +154,7 @@ fun TypingIndicator() {
         ) {
             Text("屿", fontSize = 14.sp, color = DeepGray)
         }
-        Spacer(modifier = Modifier.width(XinyuSpacing.sm)
+        Spacer(modifier = Modifier.width(XinyuSpacing.sm))
         Box(
             modifier = Modifier
                 .clip(RoundedCornerShape(XinyuRadius.md))
@@ -217,7 +217,7 @@ fun YuwengCharacterArea(
             )
         }
 
-        Spacer(modifier = Modifier.height(XinyuSpacing.sm)
+        Spacer(modifier = Modifier.height(XinyuSpacing.sm))
 
         Text(
             text = activityText,
@@ -246,7 +246,7 @@ fun ChatBubble(message: ChatMessage) {
             ) {
                 Text("屿", fontSize = 14.sp, color = DeepGray)
             }
-            Spacer(modifier = Modifier.width(XinyuSpacing.sm)
+            Spacer(modifier = Modifier.width(XinyuSpacing.sm))
         }
 
         val bubbleColor = if (isYuweng) {
@@ -271,7 +271,7 @@ fun ChatBubble(message: ChatMessage) {
         }
 
         if (!isYuweng) {
-            Spacer(modifier = Modifier.width(XinyuSpacing.sm)
+            Spacer(modifier = Modifier.width(XinyuSpacing.sm))
             Box(
                 modifier = Modifier
                     .size(36.dp)
@@ -354,7 +354,7 @@ fun ChatInputArea(
             textStyle = XinyuFontSize.body
         )
 
-        Spacer(modifier = Modifier.width(XinyuSpacing.sm)
+        Spacer(modifier = Modifier.width(XinyuSpacing.sm))
 
         Button(
             onClick = onSend,
