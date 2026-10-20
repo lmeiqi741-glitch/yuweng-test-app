@@ -340,9 +340,6 @@ fun ChatInputArea(
             value = value,
             onValueChange = onValueChange,
             enabled = enabled,
-            placeholder = {
-                Text(placeholder, color = FogGray, fontSize = XinyuFontSize.body)
-            },
             modifier = Modifier.weight(1f),
             shape = RoundedCornerShape(XinyuRadius.md),
             colors = TextFieldDefaults.colors(
