@@ -163,7 +163,7 @@ fun TypingIndicator() {
         ) {
             Text(
                 "正在为你编织…",
-                style = XinyuFontSize.caption,
+                fontSize = XinyuFontSize.caption,
                 color = FogGray,
                 fontStyle = FontStyle.Italic,
                 modifier = Modifier.alpha(0.5f + alpha * 0.5f)
@@ -221,7 +221,7 @@ fun YuwengCharacterArea(
 
         Text(
             text = activityText,
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = FogGray,
             fontStyle = FontStyle.Italic
         )
@@ -265,7 +265,7 @@ fun ChatBubble(message: ChatMessage) {
         ) {
             Text(
                 text = message.content,
-                style = XinyuFontSize.body,
+                fontSize = XinyuFontSize.body,
                 color = textColor
             )
         }
@@ -297,7 +297,7 @@ fun SilenceStateBar(silenceState: SilenceState) {
     ) {
         Text(
             text = silenceState.uiText,
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = FogGray,
             fontStyle = FontStyle.Italic
         )
@@ -314,7 +314,7 @@ fun MockModeHint(modifier: Modifier = Modifier) {
     ) {
         Text(
             text = "屿翁还在用模拟模式和说话。去设置里填入 API，他会更像他。",
-            style = XinyuFontSize.caption,
+            fontSize = XinyuFontSize.caption,
             color = DaiGray
         )
     }
@@ -339,7 +339,7 @@ fun ChatInputArea(
             onValueChange = onValueChange,
             enabled = enabled,
             placeholder = {
-                Text(placeholder, color = FogGray, style = XinyuFontSize.body)
+                Text(placeholder, color = FogGray, fontSize = XinyuFontSize.body)
             },
             modifier = Modifier.weight(1f),
             shape = RoundedCornerShape(XinyuRadius.md),
