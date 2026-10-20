@@ -10,6 +10,8 @@ import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
+import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -334,7 +336,7 @@ fun ChatInputArea(
         modifier = Modifier.fillMaxWidth(),
         verticalAlignment = Alignment.CenterVertically
     ) {
-        OutlinedTextField(
+        TextField(
             value = value,
             onValueChange = onValueChange,
             enabled = enabled,
@@ -343,10 +345,10 @@ fun ChatInputArea(
             },
             modifier = Modifier.weight(1f),
             shape = RoundedCornerShape(XinyuRadius.md),
-            colors = OutlinedTextFieldDefaults.colors(
-                focusedBorderColor = WarmGold,
-                unfocusedBorderColor = Divider,
-                disabledBorderColor = Divider.copy(alpha = 0.5f),
+            colors = TextFieldDefaults.colors(
+                focusedIndicatorColor = WarmGold,
+                unfocusedIndicatorColor = Divider,
+                disabledIndicatorColor = Divider.copy(alpha = 0.5f),
                 focusedContainerColor = MoonWhite,
                 unfocusedContainerColor = MoonWhite,
                 disabledContainerColor = MoonWhite.copy(alpha = 0.7f)
