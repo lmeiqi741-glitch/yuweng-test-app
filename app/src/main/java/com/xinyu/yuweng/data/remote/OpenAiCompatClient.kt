@@ -1,7 +1,7 @@
 package com.xinyu.yuweng.data.remote
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.xinyu.yuweng.data.remote.dto.ChatApi
+import com.xinyu.yuweng.data.remote.ChatApi
 import com.xinyu.yuweng.data.remote.dto.ChatMessage
 import com.xinyu.yuweng.data.remote.dto.ChatRequest
 import kotlinx.serialization.json.Json
