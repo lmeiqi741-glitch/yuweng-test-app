@@ -1,0 +1,26 @@
+# Build outputs
+build/
+.gradle/
+.idea/
+*.iml
+local.properties
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Keystore files
+*.keystore
+*.jks
+
+# Log files
+*.log
+
+# Kotlin metadata
+*.kotlin_metadata
+
+# Android
+app/build/
+captures/
+.externalNativeBuild/
+.cxx/
