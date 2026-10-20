@@ -372,11 +372,10 @@ fun FilterChip(
     selected: Boolean,
     onClick: () -> Unit,
     label: @Composable () -> Unit,
-    modifier: Modifier = Modifier,
-    colors: FilterChipColors = FilterChipDefaults.filterChipColors()
+    modifier: Modifier = Modifier
 ) {
-    val bgColor = if (selected) colors.selectedContainerColor else Color.Transparent
-    val borderColor = if (selected) colors.selectedContainerColor else Divider
+    val bgColor = if (selected) WarmGold.copy(alpha = 0.3f) else Color.Transparent
+    val borderColor = if (selected) WarmGold.copy(alpha = 0.3f) else Divider
 
     Surface(
         modifier = modifier
